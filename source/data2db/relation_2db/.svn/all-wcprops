@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/relation_2db
+END
+join_zzjb.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/relation_2db/join_zzjb.sql
+END
+create_relation.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/relation_2db/create_relation.sql
+END
+join_jbyp.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/relation_2db/join_jbyp.sql
+END
+join_zzyp.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/relation_2db/join_zzyp.sql
+END

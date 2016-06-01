@@ -1,0 +1,43 @@
+药品部分 
+tbl_drug_info  tbl_drug_class
+    运行下面这条命令切分各个分层表数据源
+    ./class_drug_info.sh drug_info_v6_res v6
+    Mysql中运行这条命令创建各个分层表(base_表)，如果已经创建则跳过
+    source create_drug_all.sql
+    运行下面这条命令将数据源导入到分层表中
+    ./loaddata.sh v6
+    Mysql中运行这条命令将分层表合并为药品全量信息表
+    source join_all_druginfo.sql
+
+症状部分
+tbl_zz_info   tbl_zz_class  tbl_zz_info_dzyp  tbl_zz_info_xgjb
+    运行下面这条命令切分各个表数据源
+    ./class_zz_info.sh spider输出的数据 版本号
+    Mysql中运行这条命令创建各个分层表(base_表)，如果已经创建则跳过
+    source create_zz_all.sql
+    运行下面这条命令将数据源导入到表中
+    ./load_zz_data.sh
+    运行下面这两条命令产出zz_info对应的zz相关疾病拆分列表和zz对症药品拆分列表
+    ./split_zz2_jbyp.py v3_db_zz_info zz_xgjb >v3_db_zz_xgjb
+    ./split_zz2_jbyp.py v3_db_zz_info zz_dzyp >v3_db_zz_dzyp
+
+疾病部分
+tbl_jb_info tbl_jb_class  tbl_jb_info_dzyp
+    运行下面这条命令切分各个表数据源
+    ./class_jb_info.sh spider输出的数据 版本号
+    Mysql中运行这条命令创建各个分层表(base_表)，如果已经创建则跳过
+    source create_jb_all.sql
+    运行./split_jb_info.py v3_db_jb_info_nosp >v3_db_jb_info 切分各个字段和KV列表
+    运行下面这条命令将数据源导入到表中
+    ./load_jb_data.sh
+    运行下面这条命令将v3_db_jb_info中的dzyp_list字段切分为多条药品记录
+    ./split_jb2dzyp.py v3_db_jb_info v3_db_jb_info_dzyp
+
+关联表的生成
+tbl_jbyp_relation   tbl_zzyp_relation   tbl_zzjb_relation
+    Mysql中运行这条命令创建各个关联表，如果已经创建则跳过
+    source create_relation.sql
+    Mysql中运行这条命令创建各个关联表，如果已经创建则跳过
+    source join_jbyp.sql
+    source join_zzjb.sql
+    source join_zzyp.sql

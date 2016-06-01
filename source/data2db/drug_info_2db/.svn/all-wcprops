@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/drug_info_2db
+END
+loaddata.sh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/drug_info_2db/loaddata.sh
+END
+join_all_druginfo.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/drug_info_2db/join_all_druginfo.sql
+END
+create_drug_all.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/drug_info_2db/create_drug_all.sql
+END
+class_drug_info.sh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/trunk/39NET_spdier_code/data2db/drug_info_2db/class_drug_info.sh
+END
